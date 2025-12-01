@@ -860,6 +860,70 @@ header {
     margin: 0;
 }
 
+
+/* Founder Section */
+.founder {
+    background-color: #f9f9f9;
+}
+
+.founder-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.founder-image {
+    flex: 1;
+    text-align: center;
+}
+
+.founder-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.founder-image img:hover {
+    transform: scale(1.02);
+}
+
+.founder-text {
+    flex: 2;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    opacity: 0.2;
+    margin-bottom: 20px;
+}
+
+.founder-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.founder-quote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.founder-name {
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+}
+
 /* Vendor Prefixes for Cross-Browser Compatibility */
 .service-card {
     -webkit-box-shadow: var(--shadow-sm);
@@ -889,13 +953,223 @@ header {
     .hero,
     .section-padding {
         overflow: visible;
+        padding: 12px 16px;
+        border: 1px solid #e1e1e1;
+        border-radius: var(--radius-md);
+        font-family: inherit;
+        font-size: 1rem;
+        color: var(--text-dark);
+        background: #f8f9fa;
+        transition: var(--transition);
     }
-}
 
-/* Mobile Form Fixes */
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-        gap: 0;
+    /* Booking Form Alignment Fix */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        text-align: left;
     }
-}
+
+    /* Booking Form Polish */
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        transition: var(--transition);
+    }
+
+    .gallery-overlay span {
+        color: var(--white);
+        font-size: 1.2rem;
+        font-weight: 600;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: var(--transition);
+        transition-delay: 0.1s;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        background: var(--white);
+        padding: 30px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .stars {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .stamp {
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .stamp.filled {
+        background: var(--white);
+        color: var(--primary-blue);
+        border-color: var(--white);
+    }
+
+    .stamp.reward {
+        width: auto;
+        padding: 0 20px;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 700;
+        background: #FFD700;
+        color: var(--text-dark);
+        border: none;
+    }
+
+    .client-info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .client-info h4 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+
+    /* Founder Section */
+    .founder {
+        background-color: #f9f9f9;
+    }
+
+    .founder-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .founder-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .founder-image img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+        box-shadow: var(--shadow-lg);
+        object-fit: cover;
+        transition: var(--transition);
+    }
+
+    .founder-image img:hover {
+        transform: scale(1.02);
+    }
+
+    .founder-text {
+        flex: 2;
+        position: relative;
+    }
+
+    .quote-icon {
+        font-size: 2rem;
+        color: var(--primary-blue);
+        opacity: 0.2;
+        margin-bottom: 20px;
+    }
+
+    .founder-text h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--primary-blue);
+    }
+
+    .founder-quote {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        font-style: italic;
+        color: var(--text-dark);
+        margin-bottom: 25px;
+    }
+
+    .founder-name {
+        font-weight: 700;
+        color: var(--primary-blue);
+        font-size: 1.1rem;
+    }
+
+    /* Vendor Prefixes for Cross-Browser Compatibility */
+    .service-card {
+        -webkit-box-shadow: var(--shadow-sm);
+        -webkit-transition: var(--transition);
+    }
+
+    .service-card:hover {
+        -webkit-transform: translateY(-10px);
+        -webkit-box-shadow: var(--shadow-lg);
+    }
+
+    .testimonial-card {
+        -webkit-box-shadow: var(--shadow-sm);
+    }
+
+    /* Edge Browser Compatibility */
+    @supports (-ms-ime-align:auto) {
+        header {
+            position: relative;
+            z-index: 99;
+        }
+
+        img {
+            object-fit: contain;
+        }
+
+        .hero,
+        .section-padding {
+            overflow: visible;
+        }
+    }
+
+    /* Mobile Form Fixes */
+    @media (max-width: 768px) {
+        .form-row {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        /* Founder Mobile */
+        .founder-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .founder-image {
+            margin-bottom: 10px;
+        }
+
+        .founder-text h3 {
+            font-size: 1.8rem;
+        }
+    }
